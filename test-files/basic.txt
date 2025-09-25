@@ -2,5 +2,6 @@ bla bla asdfasdf www.google.com
 here, www.google.com is ignored (as it's not within [])
 other example [ www.google.com ] fg
 here it is detected
-yet another example [ some text www.googlesecond.com ] sdfgsd
+yet another example [ some text https://www.youtube.com ] sdfgsd
 here it is also detected
+yet another example [ some text www.googletestaha.com ] sdfgsd

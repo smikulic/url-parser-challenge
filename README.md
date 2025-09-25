@@ -16,3 +16,5 @@
   - 1st implement very basic check for content with brackets + added tests
   - add extract url logic which returns only the last url
   - add duplicate check
+5. Continuing with the http get request logic and addig `http-handler.js`
+  - simply process all urls from the file
