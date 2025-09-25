@@ -18,3 +18,4 @@
   - add duplicate check
 5. Continuing with the http get request logic and addig `http-handler.js`
   - simply process all urls from the file
+  - add rate limiting and retry logic
