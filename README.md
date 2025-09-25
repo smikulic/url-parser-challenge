@@ -13,4 +13,5 @@
 3. Add `index.js` to abstract the input/output logic from the actual url parsing
   - Check for bad script calling and non existing bracket content
 4. Add `url-parser.js`
-  - implement very basic check for content with brackets + added tests
+  - 1st implement very basic check for content with brackets + added tests
+  - add extract url logic which returns only the last url
