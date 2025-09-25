@@ -29,4 +29,5 @@
   - add email hashing with secret key
 7. Add a simple npm run script
   - support inline env variable as well as `.env`
+8. Add support for nested urls by flattening the brackets
 

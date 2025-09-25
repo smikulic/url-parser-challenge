@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-// Load environment variables from .env file
-require('dotenv').config();
+require("dotenv").config({ quiet: true });
 
 const fs = require("fs");
 const { parseUrlsFromText } = require("./url-parser");
