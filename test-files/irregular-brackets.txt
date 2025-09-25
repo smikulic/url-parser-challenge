@@ -1,0 +1,5 @@
+incomplete bracket [www.example.com without closing
+] bracket before opening
+normal case [www.test.com] works
+[another incomplete www.github.com
+mixed [www.valid.com] and incomplete [www.invalid.com

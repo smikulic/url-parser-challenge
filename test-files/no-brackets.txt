@@ -1,0 +1,2 @@
+bla bla asdfasdf www.google.com
+here, www.google.com is ignored (as it's not within [])

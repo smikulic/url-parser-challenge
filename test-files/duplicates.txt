@@ -1,0 +1,5 @@
+[www.google.com] appears first
+then [www.example.com] is new
+[www.google.com] appears again but should be ignored
+[www.test.com] is new
+[www.example.com] duplicate again

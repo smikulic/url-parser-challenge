@@ -1,0 +1,4 @@
+multiple urls [bla www.first.com asdfasdf www.second.com truc]
+only www.second.com is detected
+
+another case [www.example.com and www.test.com should pick last one]

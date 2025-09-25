@@ -1,0 +1,5 @@
+asdf \[www.google.com]
+nothing is detected here.
+asdf \\[www.google.com]
+or here.
+and this \] is just escaped bracket [www.test.com] should work

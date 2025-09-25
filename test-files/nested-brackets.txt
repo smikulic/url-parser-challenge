@@ -1,0 +1,6 @@
+multiple levels[ [www.first.com] www.second.com]
+Is equivalent to
+multiple levels[ www.first.com www.second.com]
+(without inner bracket pair), thus resolving to www.second.com
+multiple levels[ www.first.com [www.third.com]]
+www.third.com is detected
