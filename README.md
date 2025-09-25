@@ -15,3 +15,4 @@
 4. Add `url-parser.js`
   - 1st implement very basic check for content with brackets + added tests
   - add extract url logic which returns only the last url
+  - add duplicate check

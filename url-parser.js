@@ -1,5 +1,6 @@
 function parseUrlsFromText(text) {
   const urls = [];
+  const seenUrls = new Set();
 
   // Simple regex to find content within square brackets
   const bracketRegex = /\[([^\]]+)\]/g;
@@ -9,8 +10,11 @@ function parseUrlsFromText(text) {
     const content = match[1];
     // Extract URL from the content (will pick the last one if multiple)
     const url = extractLastUrl(content);
-    if (url) {
+
+    // Only add URL if we haven't seen it before
+    if (url && !seenUrls.has(url)) {
       urls.push(url);
+      seenUrls.add(url);
     }
   }
 

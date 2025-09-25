@@ -24,4 +24,11 @@ describe("URL Parser", () => {
     const result = parseUrlsFromText(text);
     expect(result).toEqual(["www.google.com"]);
   });
+
+  test("should ignore duplicate URLs", () => {
+    const text =
+      "[www.google.com] then [www.example.com] then [www.google.com] again";
+    const result = parseUrlsFromText(text);
+    expect(result).toEqual(["www.google.com", "www.example.com"]);
+  });
 });
