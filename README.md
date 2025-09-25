@@ -1,3 +1,8 @@
+## How to run
+- run `npm install`
+- then run the script with `npm run process test-files/basic.txt`
+- you can run other examples within the `test-files` folder
+
 ## Step by step implementation
 
 1. Initialise node.js with minimum dependencies.
@@ -19,3 +24,9 @@
 5. Continuing with the http get request logic and addig `http-handler.js`
   - simply process all urls from the file
   - add rate limiting and retry logic
+6. Add `html-parser.js` to tackle extraction of title and email
+  - extract title and email with `cheerio` and log if they are present in the fetched url
+  - add email hashing with secret key
+7. Add a simple npm run script
+  - support inline env variable as well as `.env`
+

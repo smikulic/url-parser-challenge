@@ -1,8 +1,13 @@
 #!/usr/bin/env node
 
+// Load environment variables from .env file
+require('dotenv').config();
+
 const fs = require("fs");
 const { parseUrlsFromText } = require("./url-parser");
 const { fetchUrl } = require("./http-handler");
+const { parseHtml } = require("./html-parser");
+const { hashEmail } = require("./email-hasher");
 
 async function main() {
   // get the 3rd parameter from the script runner (node <script-path> <file-path>)
@@ -22,7 +27,19 @@ async function main() {
       const html = await fetchUrl(url);
 
       if (html) {
+        // Parse HTML for title and email
+        const { title, email } = parseHtml(html);
+
         const result = { url };
+
+        if (title) {
+          result.title = title;
+        }
+
+        if (email) {
+          result.email = hashEmail(email);
+        }
+
         console.log(JSON.stringify(result));
       }
     }
