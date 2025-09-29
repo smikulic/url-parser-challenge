@@ -9,6 +9,11 @@ function parseUrlsFromText(text) {
     // Skip non-bracket characters
     if (text[i] !== "[") continue;
 
+    // Check if this bracket is escaped (supports multiple escape characters)
+    if (i > 0 && text[i - 1] === "\\") {
+      continue;
+    }
+
     // Find matching closing bracket
     const closeIndex = findMatchingBracket(text, i);
     if (closeIndex === -1) continue;

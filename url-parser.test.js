@@ -73,4 +73,11 @@ describe("URL Parser", () => {
     const result = parseUrlsFromText(text);
     expect(result).toEqual(["www.third.com"]);
   });
+
+  test("should handle escaped brackets", () => {
+    const text =
+      "\\[www.google.com] should be ignored but [www.example.com] works";
+    const result = parseUrlsFromText(text);
+    expect(result).toEqual(["www.example.com"]);
+  });
 });
