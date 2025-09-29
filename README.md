@@ -1,6 +1,6 @@
 ## How to run
 - run `npm install`
-- then run the script with `npm run process test-files/basic.txt`
+- then run the script with `npm run process test-files/basic.txt` or add a `.env` file (check out .env.example) and then you can your own `node index.js test-files/basic.txt` without prepended ENV variable
 - you can run other examples within the `test-files` folder
 
 ## Step by step implementation
@@ -30,4 +30,6 @@
 7. Add a simple npm run script
   - support inline env variable as well as `.env`
 8. Add support for nested urls by flattening the brackets
+9. Support irregular brackets
+10. Document and comment
 

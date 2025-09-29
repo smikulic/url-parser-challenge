@@ -80,4 +80,15 @@ describe("URL Parser", () => {
     const result = parseUrlsFromText(text);
     expect(result).toEqual(["www.example.com"]);
   });
+
+  test("should handle irregular brackets without closing", () => {
+    const text = `incomplete bracket [www.example.com without closing`;
+    const result = parseUrlsFromText(text);
+    expect(result).toEqual([]);
+  });
+  test("should handle irregular brackets and return valid results", () => {
+    const text = `mixed [www.valid.com] and incomplete [www.invalid.com`;
+    const result = parseUrlsFromText(text);
+    expect(result).toEqual(["www.valid.com"]);
+  });
 });

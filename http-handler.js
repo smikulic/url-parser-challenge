@@ -1,5 +1,24 @@
-let lastRequestTime = 0;
+/**
+ * HTTP request handler with rate limiting and retry logic
+ *
+ * Flow:
+ * 1. Rate limiting: Ensure minimum 1 second between requests
+ * 2. URL normalization: Add http:// if no protocol specified
+ * 3. Make HTTP GET request using fetch()
+ * 4. On failure: Wait 60 seconds, then retry once
+ * 5. Return HTML content or null if both attempts fail
+ *
+ * Rate limiting is global across all requests to respect server limits
+ */
 
+let lastRequestTime = 0; // Global timestamp to enforce rate limiting
+
+/**
+ * Fetches URL content with rate limiting and retry logic
+ *
+ * @param {string} url - URL to fetch (can be with or without protocol)
+ * @returns {string|null} HTML content or null if request failed
+ */
 async function fetchUrl(url) {
   // ensure at least 1 second between requests
   const now = Date.now();
